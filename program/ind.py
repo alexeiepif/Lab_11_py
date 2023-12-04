@@ -85,7 +85,10 @@ def main():
                 route = get_route()
                 if route not in routes:
                     bisect.insort(
-                        routes, route, key=lambda item: item.get('номер маршрута'))
+                        routes, route, key=lambda item: item.get(
+                            'номер маршрута'
+                        )
+                    )
                 else:
                     print("Данный маршрут уже добавлен.")
 
@@ -101,8 +104,10 @@ def main():
                 print("Список команд:\n")
                 print("add - добавить маршрут;")
                 print("list - вывести список маршрутов;")
-                print("select <название пункта> - запросить маршруты, которые начинаются\n"
-                      "или заканчиваются в данном пункте;")
+                print(
+                    "select <название пункта> - запросить маршруты, которые начинаются\n"
+                    "или заканчиваются в данном пункте;"
+                )
                 print("help - отобразить справку;")
                 print("exit - завершить работу с программой.")
 
